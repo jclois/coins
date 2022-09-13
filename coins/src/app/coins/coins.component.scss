@@ -1,16 +1,16 @@
 /* Coins private CSS styles */
-.Coin {
+.coins {
   margin: 0 0 2em 0;
   list-style-type: none;
   padding: 0;
   width: 15em;
 }
 
-.Coin li {
+.coins li {
   display: flex;
 }
 
-.Coin button {
+.coins button {
   flex: 1;
   cursor: pointer;
   position: relative;
@@ -24,28 +24,28 @@
   height: 1.8em;
 }
 
-.Coin button:hover {
+.coins button:hover {
   color: #2c3a41;
   background-color: #e6e6e6;
   left: .1em;
 }
 
-.Coin button:active {
+.coins button:active {
   background-color: #525252;
   color: #fafafa;
 }
 
-.Coin button.selected {
+.coins button.selected {
   background-color: black;
   color: white;
 }
 
-.Coin button.selected:hover {
+.coins button.selected:hover {
   background-color: #505050;
   color: white;
 }
 
-.Coin button.selected:active {
+.coins button.selected:active {
   background-color: black;
   color: rgb(131, 45, 45);
 }

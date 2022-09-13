@@ -18,7 +18,7 @@ export class CoinsComponent implements OnInit {
   }
 
   onSelect(coins: Coin){
-    this.selectedCoin = coin;
+    this.selectedCoin = coins;
     console.log(this.selectedCoin);
   }
 

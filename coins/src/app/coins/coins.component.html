@@ -2,4 +2,8 @@
 
 <div><span>id: </span> {{ coin.id }}</div>
 
-<div><span>name: </span> {{ coin.name | uppercase }}</div>
+<div>
+  <label>name: </label>
+  <input [(ngModel)]="coin.name" placeholder="name" />
+
+</div>

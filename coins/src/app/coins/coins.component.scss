@@ -35,17 +35,17 @@
   color: #fafafa;
 }
 
-.coins button.selected {
+.Coin button.selected {
   background-color: black;
   color: white;
 }
 
-.coins button.selected:hover {
+.Coin button.selected:hover {
   background-color: #505050;
   color: white;
 }
 
-.coin button.selected:active {
+.Coin button.selected:active {
   background-color: black;
   color: rgb(131, 45, 45);
 }

@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CoinsComponent implements OnInit {
 
+  coin = 'American Angle';
+
   constructor() { }
 
   ngOnInit(): void {

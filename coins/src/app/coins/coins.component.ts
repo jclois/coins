@@ -17,8 +17,8 @@ export class CoinsComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onSelect(coins: Coin){
-    this.selectedCoin = coins;
+  onSelect(coin: Coin){
+    this.selectedCoin = coin;
     console.log(this.selectedCoin);
   }
 

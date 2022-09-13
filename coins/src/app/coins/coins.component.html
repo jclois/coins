@@ -8,11 +8,4 @@
   </li>
 </ul>
 
-<div *ngIf="selectedCoin">
-  <h2>{{selectedCoin.name | uppercase}} Details</h2>
-  <div>id: {{selectedCoin.id}}</div>
-  <div>
-    <label for="coin-name">Coin name: </label>
-    <input id="coin-name" [(ngModel)]="selectedCoin.name" placeholder="name">
-  </div>
-</div>
+<app-coin-details [coin]="selectedCoin"></app-coin-details>

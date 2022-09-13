@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Coin } from '../coins';
 import { COINS } from '../mock-coins';
+import { CoinService } from '../coin.service';
 
 @Component({
   selector: 'app-coins',
@@ -9,12 +10,17 @@ import { COINS } from '../mock-coins';
 })
 export class CoinsComponent implements OnInit {
 
-  coins = COINS;
+  coins = Coin[];
   selectedCoin: Coin;
 
-  constructor() { }
+  constructor(private coinService: CoinService) { }
 
   ngOnInit(): void {
+    this.getCoins();
+  }
+
+  getCoins() {
+    this.coins = this.coinService.getCoins();
   }
 
   onSelect(coin: Coin){

@@ -1,16 +1,16 @@
 /* Coins private CSS styles */
-.coins {
+.Coin {
   margin: 0 0 2em 0;
   list-style-type: none;
   padding: 0;
   width: 15em;
 }
 
-.coins li {
+.Coin li {
   display: flex;
 }
 
-.coins button {
+.Coin button {
   flex: 1;
   cursor: pointer;
   position: relative;

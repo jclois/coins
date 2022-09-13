@@ -1,9 +1,7 @@
-<h2>{{ coin.name }} Details</h2>
+<h2>My Coins</h2>
 
-<div><span>id: </span> {{ coin.id }}</div>
-
-<div>
-  <label>name: </label>
-  <input [(ngModel)]="coin.name" placeholder="name" />
-
-</div>
+<ul> class="coins">
+  <li *ngFor="let coin of coins">
+    <span class="bullion">{{coin.id}}</span> {{coin.name}}
+  </li>
+</ul>

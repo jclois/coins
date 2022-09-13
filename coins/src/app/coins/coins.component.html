@@ -6,7 +6,8 @@
   </div>
 
 <ul class="coins">
-  <li *ngFor="let coin of coins" (click)="onSelect(coin)">
+  <li [class.selected]="coin === selectedCoin" 
+  *ngFor="let coin of coins" (click)="onSelect(coin)">
     <span class="bullion">{{coin.id}}</span> {{coin.name}}
   </li>
 </ul>

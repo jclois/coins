@@ -1,13 +1,18 @@
 <h2>My Coins</h2>
-
-<div *ngIf="selectedCoin">
-  <h2>{{ selectedCoin.name | uppercase }} Details</h2>
-  <div><span>id: </span>{{ selectedCoin.id}}</div>
-  </div>
-
 <ul class="coins">
-  <li [class.selected]="coin === selectedCoin" 
-  *ngFor="let coin of coins" (click)="onSelect(coin)">
-    <span class="bullion">{{coin.id}}</span> {{coin.name}}
+  <li *ngFor="let coin of coins">
+    <button [class.selected]="coin === selectedCoin" type="button" (click)="onSelect(coin)">
+      <span class="bullion">{{coin.id}}</span>
+      <span class="name">{{coin.name}}</span>
+    </button>
   </li>
 </ul>
+
+<div *ngIf="selectedCoin">
+  <h2>{{selectedCoin.name | uppercase}} Details</h2>
+  <div>id: {{selectedCoin.id}}</div>
+  <div>
+    <label for="coin-name">Coin name: </label>
+    <input id="coin-name" [(ngModel)]="selectedCoin.name" placeholder="name">
+  </div>
+</div>

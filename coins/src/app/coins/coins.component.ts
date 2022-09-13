@@ -8,7 +8,7 @@ import { Coin } from '../coins';
 })
 export class CoinsComponent implements OnInit {
 
-  coin: Coin = { id: 1, name: 'American Angle'};
+  coin: Coin = { id: 1, name: 'American Eagle'};
 
   constructor() { }
 

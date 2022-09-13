@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Coin } from '../coins';
+import { COINS } from '../mock-coins';
 
 @Component({
   selector: 'app-coins',
@@ -8,7 +9,7 @@ import { Coin } from '../coins';
 })
 export class CoinsComponent implements OnInit {
 
-  coin = Coin;
+  coins = COINS;
 
   constructor() { }
 

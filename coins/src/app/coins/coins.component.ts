@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CoinsComponent implements OnInit {
 
-  coin = 'American Angle';
+  coin: Coin = { id: 1, name: 'American Angle'};
 
   constructor() { }
 

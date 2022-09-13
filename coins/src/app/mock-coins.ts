@@ -1,4 +1,4 @@
-import { Coin } from '../coins';
+import {Coin} from './coins';
 
 export const COINS: Coin[] = [
   { id: 12, name: 'Dr. Nice' },

@@ -8,7 +8,7 @@ import { Coin } from '../coins';
 })
 export class CoinsComponent implements OnInit {
 
-  coin = COINS;
+  coin = Coin;
 
   constructor() { }
 

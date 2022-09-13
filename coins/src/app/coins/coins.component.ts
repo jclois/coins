@@ -10,10 +10,16 @@ import { COINS } from '../mock-coins';
 export class CoinsComponent implements OnInit {
 
   coins = COINS;
+  selectedCoin: Coin;
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  onSelect(coin: Coin){
+    this.selecedcoin = coin;
+    console.log(this.selectedCoin);
   }
 
 }

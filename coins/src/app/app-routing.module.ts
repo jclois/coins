@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes} from '@angular/router';
+import { CoinsComponent } from './coins/coins.component';
 
 const routes: Routes =[
   {path: 'coins', component: CoinsComponent}

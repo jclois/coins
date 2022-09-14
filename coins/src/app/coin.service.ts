@@ -11,6 +11,6 @@ export class CoinService {
   constructor() { }
 
   getCoins(): Observable<Coin[]> {
-    return if(COINS);
+    return of(COINS);
   }
 }

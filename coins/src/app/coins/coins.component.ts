@@ -20,7 +20,8 @@ export class CoinsComponent implements OnInit {
   }
 
   getCoins() {
-    this.coins = this.coinService.getCoins();
+    this.coinService.getCoins()
+    .subscribe(coins => this.coins = coins);
   }
 
   onSelect(coin: Coin){

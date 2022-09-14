@@ -9,7 +9,7 @@ import { CoinService } from '../coin.service';
   styleUrls: [ './dashboard.component.css' ]
 })
 export class DashboardComponent implements OnInit {
-  heroes: Coin[] = [];
+  coins: Coin[] = [];
 
   constructor(private coinService: CoinService) { }
 

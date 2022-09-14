@@ -8,7 +8,7 @@ import { Observable, of } from 'rxjs';
 })
 export class CoinService {
 
-  constructor() { }
+  constructor(private messageService: MessageService) { }
 
   getCoins(): Observable<Coin[]> {
     return of(COINS);

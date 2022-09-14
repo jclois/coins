@@ -11,6 +11,7 @@ export class CoinService {
   constructor(private messageService: MessageService) { }
 
   getCoins(): Observable<Coin[]> {
+    this.messageService.add(`CoinService: Fetched Coins`).
     return of(COINS);
   }
 }

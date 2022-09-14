@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import { Coin } from '../coins';
-import { COINS } from '../mock-coins';
+import { Coin } from './coins';
+import { COINS } from './mock-coins';
 
 @Injectable({
   providedIn: 'root'

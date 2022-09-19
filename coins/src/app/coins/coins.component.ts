@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Coin } from '../coins';
 import { COINS } from '../mock-coins';
 import { CoinService } from '../coin.service';
+import { Observable } from 'rxjs;
 
 @Component({
   selector: 'app-coins',

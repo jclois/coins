@@ -19,7 +19,7 @@ export class CoinsComponent implements OnInit {
     this.getCoins();
   }
 
-  getCoins() {
+  getCoins(): void {
     this.coinService.getCoins().subscribe(coins => this.coins = coins);
   }
 

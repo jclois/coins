@@ -15,4 +15,11 @@ export class CoinService {
     this.messageService.add(`CoinService: Fetched Coins`);
     return of(COINS);
   }
+
+  getCoin(id: number): Observable<Coin>{
+    this.messageService.add(`CoinService: Fetched with id: ${id}`);
+
+    return of(COINS find(coin => coin.id === id));
+  }
+
 }

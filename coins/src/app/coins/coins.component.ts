@@ -12,7 +12,7 @@ import { Observable } from 'rxjs';
 export class CoinsComponent implements OnInit {
 
   //*coins: Coin[];
-  coins: Observable<Coin>;
+  coins: Observable<Coin[]>;
   selectedCoin: Coin;
 
   constructor(private coinService: CoinService) { }

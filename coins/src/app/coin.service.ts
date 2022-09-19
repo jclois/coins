@@ -16,10 +16,12 @@ export class CoinService {
     return of(COINS);
   }
 
-  getCoin(id: number): Observable<Coin>{
-    this.messageService.add(`CoinService: Fetched with id: ${id}`);
-
-    return of(COINS.find(coin => coin.id === id)!);
+  getCoin(id: number): Observable<Coin> {
+    // For now, assume that a hero with the specified `id` always exists.
+    // Error handling will be added in the next step of the tutorial.
+    const coin = COINS.find(h => h.id === id)!;
+    this.messageService.add(`CoinService: fetched coin id=${id}`);
+    return of(coin);
   }
 
 }

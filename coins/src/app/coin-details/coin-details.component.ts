@@ -10,7 +10,7 @@ import { CoinService } from '../coin.service';
   styleUrls: ['./coin-details.component.scss']
 })
 export class CoinDetailsComponent implements OnInit {
-  @Input() coin!: Coin;
+  coin: Coin;
 
   constructor(private route: ActivatedRoute, private coinService: CoinService, private location: Location,) { }
 

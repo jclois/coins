@@ -21,7 +21,7 @@ export class CoinDetailsComponent implements OnInit {
 getCoin(): void {
   const id = +this.route.snapshot.paramMap.get('id');
 
-  this.coinService.getCoin(id).subscribe(coin => this.coin = coin);
+  this.coinService.getCoin(id).subscribe(coin => (this.coin = coin);
 }
 
 }

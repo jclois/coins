@@ -11,6 +11,7 @@ import { CoinService } from '../coin.service';
 export class CoinsComponent implements OnInit {
 
   coins: Coin[];
+  selectedCoin: Coin;
 
   constructor(private coinService: CoinService) { }
 
@@ -22,5 +23,9 @@ export class CoinsComponent implements OnInit {
     this.coinService.getCoins().subscribe(coins => this.coins = coins);
   }
 
+  onSelect(coin: Coin){
+    this.selectedCoin = coin;
+    console.log(this.selectedCoin);
+  }
 
 }

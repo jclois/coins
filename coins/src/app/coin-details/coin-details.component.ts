@@ -12,7 +12,7 @@ import { CoinService } from '../coin.service';
 export class CoinDetailsComponent implements OnInit {
   coin: Coin;
 
-  constructor(private route: ActivatedRoute, private coinService; CoinService, private location: Location,) { }
+  constructor(private route: ActivatedRoute, private coinService: CoinService, private location: Location,) { }
 
   ngOnInit(): void {
     this.getCoin();

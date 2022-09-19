@@ -19,7 +19,7 @@ export class CoinService {
   getCoin(id: number): Observable<Coin>{
     this.messageService.add(`CoinService: Fetched with id: ${id}`);
 
-    return of(COINS.find(coin => coin.id === id));
+    return of(COINS.find(coin => coin.id === id)!);
   }
 
 }

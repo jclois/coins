@@ -10,7 +10,8 @@ import { CoinService } from '../coin.service';
 })
 export class CoinsComponent implements OnInit {
 
-  coins: Coin[];
+  //*coins: Coin[];
+  coins: Observable<Coin[]>;
   selectedCoin: Coin;
 
   constructor(private coinService: CoinService) { }

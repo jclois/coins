@@ -19,9 +19,13 @@ export class CoinsComponent implements OnInit {
     this.getCoins();
   }
 
+  //*getCoins(): void {
+   //* this.coinService.getCoins().subscribe(coins => this.coins = coins);
+  //*}
+
   getCoins(): void {
-    this.coinService.getCoins().subscribe(coins => this.coins = coins);
-  }
+    this.coinService.getCoins().subscribe(result => this.coins = result);
+ }
 
   onSelect(coin: Coin){
     this.selectedCoin = coin;

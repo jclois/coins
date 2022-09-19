@@ -24,4 +24,8 @@ getCoin(): void {
   this.coinService.getCoin(id).subscribe(coin => this.coin = coin);
 }
 
+goBack(): void {
+  this.location.back();
+}
+
 }

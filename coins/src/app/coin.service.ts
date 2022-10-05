@@ -4,6 +4,7 @@ import { COINS } from './mock-coins';
 import { Observable, of } from 'rxjs';
 import { MessageService} from './message.service';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { catchError, map, tap } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -22,6 +23,9 @@ export class CoinService {
   /** GET heroes from the server */
   getCoins(): Observable<Coin[]> {
   return this.http.get<Coin[]>(this.coinsUrl)
+  .pipe(
+    catchError(this.handleError<Coin[]>('getCoins', []))
+  );
   }
 
   getCoin(id: number): Observable<Coin> {

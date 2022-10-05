@@ -20,10 +20,11 @@ export class CoinService {
   //  return of(COINS);
   // }
 
-  /** GET heroes from the server */
+  /** GET coins from the server */
   getCoins(): Observable<Coin[]> {
   return this.http.get<Coin[]>(this.coinsUrl)
   .pipe(
+    tap(_ => this.log('fetched coins')),
     catchError(this.handleError<Coin[]>('getCoins', []))
   );
   }

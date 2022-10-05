@@ -29,13 +29,22 @@ export class CoinService {
   );
   }
 
-  getCoin(id: number): Observable<Coin> {
+  /*getCoin(id: number): Observable<Coin> {
     // For now, assume that a hero with the specified `id` always exists.
     // Error handling will be added in the next step of the tutorial.
     const coin = COINS.find(h => h.id === id)!;
     this.messageService.add(`CoinService: fetched coin id=${id}`);
     return of(coin);
-  }
+  }*/
+
+  /** GET coin by id. Will 404 if id not found */
+  getCoin(id: number): Observable<Coin> {
+  const url = `${this.coinsUrl}/${id}`;
+  return this.http.get<Coin>(url).pipe(
+    tap(_ => this.log(`fetched coin id=${id}`)),
+    catchError(this.handleError<Coin>(`getCoin id=${id}`))
+  );
+}
 
   /** Log a CoinService message with the MessageService */
   private log(message: string) {

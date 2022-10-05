@@ -28,4 +28,11 @@ goBack(): void {
   this.location.back();
 }
 
+save(): void {
+  if (this.coin) {
+    this.coinService.updateCoin(this.coin)
+      .subscribe(() => this.goBack());
+  }
+}
+
 }

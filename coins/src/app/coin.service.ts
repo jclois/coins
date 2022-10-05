@@ -29,6 +29,14 @@ export class CoinService {
   );
   }
 
+  /** PUT: update the coin on the server */
+  updateCoin(coin: Coin): Observable<any> {
+  return this.http.put(this.coinsUrl, coin, this.httpOptions).pipe(
+    tap(_ => this.log(`updated hero id=${coin.id}`)),
+    catchError(this.handleError<any>('updateCoin'))
+    );
+  }
+
   /*getCoin(id: number): Observable<Coin> {
     // For now, assume that a hero with the specified `id` always exists.
     // Error handling will be added in the next step of the tutorial.

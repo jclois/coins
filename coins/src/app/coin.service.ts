@@ -14,9 +14,14 @@ export class CoinService {
 
   private coinsUrl = 'api/coins';  // URL to web api
 
+  //getCoins(): Observable<Coin[]> {
+  //  this.messageService.add(`CoinService: Fetched Coins`);
+  //  return of(COINS);
+  // }
+
+  /** GET heroes from the server */
   getCoins(): Observable<Coin[]> {
-    this.messageService.add(`CoinService: Fetched Coins`);
-    return of(COINS);
+  return this.http.get<Coin[]>(this.coinsUrl)
   }
 
   getCoin(id: number): Observable<Coin> {

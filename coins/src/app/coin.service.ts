@@ -3,13 +3,16 @@ import { Coin } from './coins';
 import { COINS } from './mock-coins';
 import { Observable, of } from 'rxjs';
 import { MessageService} from './message.service';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CoinService {
 
-  constructor(private messageService: MessageService) { }
+  constructor(private http: HttpClient, private messageService: MessageService) { }
+
+  private coinsUrl = 'api/coins';  // URL to web api
 
   getCoins(): Observable<Coin[]> {
     this.messageService.add(`CoinService: Fetched Coins`);
@@ -23,5 +26,10 @@ export class CoinService {
     this.messageService.add(`CoinService: fetched coin id=${id}`);
     return of(coin);
   }
+
+  /** Log a CoinService message with the MessageService */
+  private log(message: string) {
+  this.messageService.add(`CoinService: ${message}`);
+}
 
 }

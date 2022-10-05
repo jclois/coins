@@ -29,10 +29,14 @@ export class CoinService {
   );
   }
 
+  httpOptions = {
+    headers: new HttpHeaders({ 'Content-Type': 'application/json' })
+  };
+
   /** PUT: update the coin on the server */
   updateCoin(coin: Coin): Observable<any> {
   return this.http.put(this.coinsUrl, coin, this.httpOptions).pipe(
-    tap(_ => this.log(`updated hero id=${coin.id}`)),
+    tap(_ => this.log(`updated coin id=${coin.id}`)),
     catchError(this.handleError<any>('updateCoin'))
     );
   }

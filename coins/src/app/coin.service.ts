@@ -84,4 +84,12 @@ export class CoinService {
   };
 }
 
+/** POST: add a new coin to the server */
+addCoin(coin: Coin): Observable<Coin> {
+  return this.http.post<Coin>(this.coinsUrl, coin, this.httpOptions).pipe(
+    tap((newCoin: Coin) => this.log(`added coin w/ id=${newCoin.id}`)),
+    catchError(this.handleError<Coin>('addCoin'))
+  );
+}
+
 }

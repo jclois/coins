@@ -34,4 +34,13 @@ export class CoinsComponent implements OnInit {
     console.log(this.selectedCoin);
   }
 
+  add(name: string): void {
+    name = name.trim();
+    if (!name) { return; }
+    this.coinService.addCoin({ name } as Coin)
+      .subscribe(coin => {
+        this.coins.push(coin);
+      });
+  }
+
 }

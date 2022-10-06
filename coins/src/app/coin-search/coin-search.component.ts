@@ -18,7 +18,7 @@ export class CoinSearchComponent implements OnInit {
   coins$!: Observable<Coin[]>;
   private searchTerms = new Subject<string>();
 
-  constructor(private heroService: CoinService) {}
+  constructor(private coinService: CoinService) {}
 
   // Push a search term into the observable stream.
   search(term: string): void {

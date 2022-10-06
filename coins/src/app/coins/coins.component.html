@@ -4,6 +4,8 @@
   <a routerLink="/detail/{{coin.id}}">
     <span class="bullion">{{coin.id}}</span> {{coin.name}}
   </a>
+  <button type="button" class="delete" title="delete coin"
+  (click)="delete(coin)">x</button>
   </li>
 </ul>
 
@@ -16,9 +18,6 @@
   Add coin
 </button>
 </div>
-
-<button type="button" class="delete" title="delete coin"
-  (click)="delete(coins)">x</button>
 
   <ul class="coins">
   <li *ngFor="let coin of coins">

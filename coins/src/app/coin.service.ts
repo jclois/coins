@@ -98,7 +98,7 @@ deleteCoin(id: number): Observable<Coin> {
 
   return this.http.delete<Coin>(url, this.httpOptions).pipe(
     tap(_ => this.log(`deleted coin id=${id}`)),
-    catchError(this.handleError<Hero>('deleteCoin'))
+    catchError(this.handleError<Coin>('deleteCoin'))
   );
 }
 

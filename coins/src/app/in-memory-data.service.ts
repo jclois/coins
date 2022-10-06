@@ -8,7 +8,7 @@ import { Coin } from './coins';
 export class InMemoryDataService implements InMemoryDbService {
   createDb() {
     const coins = [
-      { id: 12, name: 'Dr. Nice' },
+      { id: 12, Type:"Silver", name: 'Dr. Nice' },
       { id: 13, name: 'Bombasto' },
       { id: 14, name: 'Celeritas' },
       { id: 15, name: 'Magneta' },

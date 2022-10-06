@@ -1,13 +1,4 @@
 <h2>My Coins</h2>
-<ul class="coins">
-  <li *ngFor="let coin of coins">
-  <a routerLink="/detail/{{coin.id}}">
-    <span class="bullion">{{coin.id}}</span> {{coin.name}}
-  </a>
-  <button type="button" class="delete" title="delete coin"
-  (click)="delete(coin)">x</button>
-  </li>
-</ul>
 
 <div>
 <label for="new-coin">Coin name: </label>

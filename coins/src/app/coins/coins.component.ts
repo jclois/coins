@@ -43,4 +43,9 @@ export class CoinsComponent implements OnInit {
       });
   }
 
+  delete(coin: Coin): void {
+    this.coins = this.coins.filter(h => h !== coin);
+    this.coinService.deleteCoin(coin.id).subscribe();
+  }
+
 }

@@ -92,4 +92,14 @@ addCoin(coin: Coin): Observable<Coin> {
   );
 }
 
+/** DELETE: delete the coin from the server */
+deleteCoin(id: number): Observable<Coin> {
+  const url = `${this.coinsUrl}/${id}`;
+
+  return this.http.delete<Coin>(url, this.httpOptions).pipe(
+    tap(_ => this.log(`deleted coin id=${id}`)),
+    catchError(this.handleError<Hero>('deleteCoin'))
+  );
+}
+
 }

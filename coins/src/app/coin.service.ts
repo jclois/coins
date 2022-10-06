@@ -102,4 +102,18 @@ deleteCoin(id: number): Observable<Coin> {
   );
 }
 
+/* GET coins whose name contains search term */
+searchCoins(term: string): Observable<Coin[]> {
+  if (!term.trim()) {
+    // if not search term, return empty coin array.
+    return of([]);
+  }
+  return this.http.get<Coin[]>(`${this.coinsUrl}/?name=${term}`).pipe(
+    tap(x => x.length ?
+       this.log(`found coins matching "${term}"`) :
+       this.log(`no coins matching "${term}"`)),
+    catchError(this.handleError<Coin[]>('searchCoins', []))
+  );
+}
+
 }

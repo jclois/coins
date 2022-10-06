@@ -1,0 +1,12 @@
+<div id="search-component">
+<label for="search-box">Coin Search</label>
+<input #searchBox id="search-box" (input)="search(searchBox.value)" />
+
+<ul class="search-result">
+  <li *ngFor="let coin of coins$ | async" >
+    <a routerLink="/detail/{{coin.id}}">
+      {{coin.name}}
+    </a>
+  </li>
+</ul>
+</div>

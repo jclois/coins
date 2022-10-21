@@ -20,12 +20,14 @@ export class ExtGoldApiComponent {
     })
     }
     
-    prices: any = [];
+    //prices: any = [];
+    prices: string = [];
+    url: string = 'https://www.goldapi.io/api/XAU/USD/?'
   
     getGoldprices(){
-      this.http.get('https://www.goldapi.io/api/XAU/USD/?',this.httpOptions).subscribe((prices: any)=>{
+      this.http.get(this.url,this.httpOptions).subscribe((prices: any)=>{
         this.prices = prices;
-        this.prices = Array.of(this.prices);
+        //this.prices = Array.of(this.prices);
         console.log(prices);
       });
     }

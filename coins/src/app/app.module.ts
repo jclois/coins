@@ -12,6 +12,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './in-memory-data.service';
 import { CoinSearchComponent } from './coin-search/coin-search.component';
+import { ExtGoldApiComponent } from './ext-gold-api/ext-gold-api.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { CoinSearchComponent } from './coin-search/coin-search.component';
     CoinDetailsComponent,
     MessagesComponent,
     DashboardComponent,
-    CoinSearchComponent
+    CoinSearchComponent,
+    ExtGoldApiComponent
   ],
   imports: [
     BrowserModule, FormsModule, AppRoutingModule, HttpClientModule,

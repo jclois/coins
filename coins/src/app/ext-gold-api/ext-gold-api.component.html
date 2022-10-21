@@ -1,0 +1,34 @@
+<main class="container">
+<div class="bg-light p-5 rounded">
+  <p class="lead">
+    Calling an API
+  </p>
+
+  <div *ngFor="let price of prices">
+    <h1>Currency ~ {{price.currency}}</h1>
+    <h1>Exchange ~ {{price.exchange}}</h1>
+    <h1>Timestamp ~ {{price.timestamp}}</h1>
+    <h1>Previous Close Price ~ {{price.prev_close_price}}</h1>
+    <h1>Open Price ~ {{price.open_price}}</h1>
+    <h1>Low Price ~ {{price.low_price}}</h1>
+    <h1>High Price ~ {{price.high_price}}</h1>
+    <h1>Current Price ~ {{price.price}}</h1>
+
+  </div>
+
+  <a
+    (click)="getGoldprices()"
+    class="btn btn-lg btn-primary"
+    href="javascript:void(0)"
+    role="button"
+  >Get Gold Prices</a>
+
+  <a
+    (click)="getSilverprices()"
+    class="btn btn-lg btn-primary"
+    href="javascript:void(0)"
+    role="button"
+  >Get Silver Prices</a>
+
+</div>
+</main>

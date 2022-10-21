@@ -4,7 +4,7 @@
     Calling an API
   </p>
 
-  <div *ngFor="let price of prices | keyvalue">
+  <div *ngFor="let price of prices | async">
     <h1>Currency ~ {{price.currency}}</h1>
     <h1>Exchange ~ {{price.exchange}}</h1>
     <h1>Timestamp ~ {{price.timestamp}}</h1>

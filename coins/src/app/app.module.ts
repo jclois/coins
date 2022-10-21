@@ -26,7 +26,7 @@ import { ExtGoldApiComponent } from './ext-gold-api/ext-gold-api.component';
     ExtGoldApiComponent
   ],
   imports: [
-    BrowserModule, FormsModule, AppRoutingModule, HttpClient, HttpClientModule,
+    BrowserModule, FormsModule, AppRoutingModule, HttpClientModule,
     // The HttpClientInMemoryWebApiModule module intercepts HTTP requests
     // and returns simulated server responses.
     // Remove it when a real server is ready to receive requests.

@@ -4,7 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { CoinsComponent } from './coins/coins.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { CoinDetailsComponent } from './coin-details/coin-details.component';
-import { ExtGoldApiComponent } from './ext-gold-api.component';
+import { ExtGoldApiComponent } from './ext-gold-api/ext-gold-api.component';
 
 const routes: Routes =[
   {path: '', redirectTo: '/dashboard', pathMatch: 'full'},

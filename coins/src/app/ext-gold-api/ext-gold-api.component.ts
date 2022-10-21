@@ -20,7 +20,7 @@ export class ExtGoldApiComponent {
     })
     }
     
-    prices: any = [];
+    prices: any = {};
   
     getGoldprices(){
       this.http.get('https://www.goldapi.io/api/XAU/USD/?',this.httpOptions).subscribe((prices: any)=>{

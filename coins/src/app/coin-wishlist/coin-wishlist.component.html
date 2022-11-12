@@ -1,0 +1,22 @@
+<main class="container">
+<div class="bg-light p-5 rounded">
+  <p class="lead">
+    Call the Internal Database to Retrieve Wishlist
+  </p>
+
+  <div *ngFor="let wishlist of wishlist">
+    <h1>name ~ {{wishlist.name}}</h1>
+    <h1>year ~ {{wishlist.year}}</h1>
+    <h1>country ~ {{wishlist.country}}</h1>
+
+  </div>
+
+  <a
+    (click)="getWishlist()"
+    class="get-wishlist"
+    href="javascript:void(0)"
+    role="button"
+  >Get Wishlist</a>
+
+</div>
+</main>

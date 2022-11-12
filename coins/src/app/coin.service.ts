@@ -13,7 +13,7 @@ export class CoinService {
 
   constructor(private http: HttpClient, private messageService: MessageService) { }
 
-  private coinsUrl = 'api/coins';  // URL to web api
+  private coinsUrl = 'https://jlvw93gbmkmzd7i-db20220615222809.adb.us-ashburn-1.oraclecloudapps.com/ords/dev/xx_coins_test';  // URL to web api
 
   //getCoins(): Observable<Coin[]> {
   //  this.messageService.add(`CoinService: Fetched Coins`);

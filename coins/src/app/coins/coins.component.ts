@@ -3,6 +3,7 @@ import { Coin } from '../coins';
 import { COINS } from '../mock-coins';
 import { CoinService } from '../coin.service';
 import { Observable } from 'rxjs';
+import { Pipe, PipeTransform } from '@angular/core';
 
 @Component({
   selector: 'app-coins',
@@ -12,7 +13,7 @@ import { Observable } from 'rxjs';
 export class CoinsComponent implements OnInit {
 
   coins: Coin[];
-  //*coins: Observable<Coin[]>;
+  //coins: Observable<Coin[]>;
   selectedCoin: Coin;
 
   constructor(private coinService: CoinService) { }
@@ -21,13 +22,13 @@ export class CoinsComponent implements OnInit {
     this.getCoins();
   }
 
-  getCoins(): void {
-   this.coinService.getCoins().subscribe(coins => this.coins = coins);
-  }
+ getCoins(): void {
+  this.coinService.getCoins().subscribe(coins => this.coins = coins);
+ }
 
-  //*getCoins(): void {
-    //*this.coinService.getCoins().subscribe(result => this.coins = result);
- //*}
+ // getCoins(): void {
+ //   this.coinService.getCoins().subscribe(result => this.coins = result);
+ // }
 
   onSelect(coin: Coin){
     this.selectedCoin = coin;

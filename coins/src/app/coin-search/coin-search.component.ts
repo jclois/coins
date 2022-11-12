@@ -12,7 +12,7 @@ import { CoinService } from '../coin.service';
 @Component({
   selector: 'app-coin-search',
   templateUrl: './coin-search.component.html',
-  styleUrls: [ './coin-search.component.css' ]
+  styleUrls: [ './coin-search.component.scss' ]
 })
 export class CoinSearchComponent implements OnInit {
   coins$!: Observable<Coin[]>;

@@ -24,7 +24,7 @@ export class CoinWishlistComponent implements OnInit {
     getWishlist(){
       this.http.get(this.url,this.httpOptions).subscribe((wishlist: any)=>{
         this.wishlist = wishlist;
-        this.wishlist = Array.of(this.wishlist);
+        //this.wishlist = Array.of(this.wishlist);
         console.log(wishlist);
       });
     }

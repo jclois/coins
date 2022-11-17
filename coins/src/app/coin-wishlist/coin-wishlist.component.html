@@ -4,12 +4,22 @@
     Call the Internal Database to Retrieve Wishlist
   </p>
 
-  <div *ngFor="let item of wishlist?.items">
-    <h1>name ~ {{item.name}}</h1>
-    <h1>year ~ {{item.year}}</h1>
-    <h1>country ~ {{item.country}}</h1>
-</div>
-
+  <table>
+  <thead>
+      <tr>
+          <th>Name</th>
+          <th>Year</th>
+          <th>Country</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr *ngFor="let item of wishlist?.items">
+          <td>{{item.name}}</td>
+          <td>{{item.year}}</td>
+          <td>{{item.country}}</td>
+      </tr>
+  </tbody>
+</table>
 
   <a
     (click)="getWishlist()"
